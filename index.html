@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI-Resume-Writer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>AI-Resume-Writer</h1>
+    </header>
+    <form action="">
+      <div class="form-group">
+        <label for="fullName">Full Name:</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          required
+          placeholder="John Doe"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="title">Job Title:</label>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          required
+          placeholder="Junior Front-End Developer"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="experience">Work Experience:</label>
+        <input
+          type="text"
+          id="experience"
+          name="experience"
+          required
+          placeholder="Internship at TechNova (3 months)"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="skills">Skills:</label>
+        <input
+          type="text"
+          id="skills"
+          name="skills"
+          required
+          placeholder="HTML, CSS, JavaScript"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="education">Education:</label>
+        <input
+          type="text"
+          id="education"
+          name="education"
+          required
+          placeholder="BSc in Computer Science - University of Sydney (2024)"
+        />
+      </div>
+
+      <button type="button" id="generate-resume-btn">Generate Resume</button>
+    </form>
+    <div id="loader" style="display: none; text-align: center; margin: 20px">
+      <div class="spinner"></div>
+    </div>
+    <div id="resume-output" class="resume-box"></div>
+    <div class="button-group">
+      <button id="copy-btn">Copy Resume</button>
+      <button id="download-pdf-btn">Download PDF</button>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
