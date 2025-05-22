@@ -27,12 +27,17 @@ label {
   font-weight: bold;
 }
 
-input {
+input,
+textarea {
   width: calc(100% - 2rem);
   padding: 0.75rem;
   border-radius: 5px;
   border: 1px solid #ccc;
   font-size: 1rem;
+}
+
+textarea {
+  resize: none;
 }
 
 button {
@@ -78,23 +83,4 @@ button:hover {
 button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
-}
-
-.spinner {
-  border: 6px solid #f3f3f3;
-  border-top: 6px solid #3498db;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
-  margin: auto;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
