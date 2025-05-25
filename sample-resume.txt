@@ -1,0 +1,20 @@
+Full Name: Sarah Lee
+Job Title: Front-End Developer
+
+Skills
+HTML, CSS, JavaScript, React, Git, Responsive Design
+
+Experience
+Junior Developer — TechNova (Jan 2023 - Present)
+- Developed reusable components in React.
+- Worked in agile sprints and delivered features on time.
+- Collaborated with UX designers to enhance accessibility.
+
+Intern — CodeWorks (Summer 2022)
+- Supported QA testing and wrote documentation.
+- Assisted in building UI layouts using HTML/CSS.
+
+Education
+BSc in Computer Science — University of Sydney (2024)
+- GPA: 3.7
+- Relevant coursework: Data Structures, Web Design, Algorithms

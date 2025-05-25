@@ -2,89 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI-Resume-Writer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Resume Updater</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   </head>
   <body>
-    <header>
-      <h1>AI-Resume-Writer</h1>
-    </header>
-    <section class="upload-section">
-      <h2>Upload Your Resume (Optional)</h2>
-      <input type="file" id="resume-upload" accept=".txt,.pdf" />
-      <button type="button" id="upload-btn">Parse Resume</button>
-      <p id="upload-feedback"></p>
-    </section>
-    <form action="">
-      <div class="form-group">
-        <label for="fullName">Full Name:</label>
-        <input
-          type="text"
-          id="fullName"
-          name="fullName"
-          required
-          placeholder="John Doe"
-        />
+    <div class="container">
+      <h1>AI Resume Updater</h1>
+
+      <div class="toggle-buttons">
+        <button id="useUpload" class="active">Upload Resume File</button>
+        <button id="useForm">Fill Form Manually</button>
       </div>
 
-      <div class="form-group">
-        <label for="title">Job Title:</label>
-        <input
-          type="text"
-          id="title"
-          name="title"
-          required
-          placeholder="Junior Front-End Developer"
-        />
+      <!-- Upload Resume File Section -->
+      <div id="uploadSection">
+        <label for="resumeFile">Choose a PDF or TXT file:</label><br />
+        <input type="file" id="resumeFile" accept=".pdf,.txt" />
       </div>
 
-      <div class="form-group">
-        <label for="experience">Work Experience:</label>
-        <textarea
-          id="experience"
-          name="experience"
-          rows="4"
-          required
-          placeholder="Software Engineer — TechNova (Jan 2023 - Present)
-- Built scalable front-end apps using React.
-- Improved load times by 30% with lazy loading.
-- Led a team of 3 interns on a product launch."
-        ></textarea>
+      <!-- Resume Form Section -->
+      <div id="formSection" class="hidden">
+        <form id="resumeForm">
+          <label>Full Name:</label>
+          <input type="text" id="fullName" required />
+
+          <label>Job Title:</label>
+          <input type="text" id="title" required />
+
+          <label>Work Experience:</label>
+          <textarea
+            id="workExperience"
+            rows="5"
+            placeholder="- Job Title at Company\n- Achievements..."
+          ></textarea>
+
+          <label>Skills (comma-separated):</label>
+          <textarea id="skills" rows="2"></textarea>
+
+          <label>Education:</label>
+          <textarea id="education" rows="3"></textarea>
+        </form>
       </div>
 
-      <div class="form-group">
-        <label for="skills">Skills:</label>
-        <textarea
-          id="skills"
-          name="skills"
-          rows="2"
-          required
-          placeholder="HTML, CSS, JavaScript, React, Git, Agile, Problem-solving"
-        ></textarea>
-      </div>
+      <button id="generateBtn">Generate Updated Resume</button>
 
-      <div class="form-group">
-        <label for="education">Education:</label>
-        <textarea
-          id="education"
-          name="education"
-          rows="3"
-          required
-          placeholder="BSc in Computer Science — University of Sydney (2024)
-- GPA: 3.8
-- Relevant coursework: Data Structures, Web Development"
-        ></textarea>
-      </div>
-
-      <button type="button" id="generate-resume-btn">Generate Resume</button>
-    </form>
-    <div id="resume-output" class="resume-box"></div>
-    <div class="button-group">
-      <button id="copy-btn">Copy Resume</button>
-      <button id="download-pdf-btn">Download PDF</button>
+      <pre id="output" class="output-box"></pre>
     </div>
+
+    <script src="script.js" type="module"></script>
   </body>
-  <script src="script.js"></script>
 </html>
