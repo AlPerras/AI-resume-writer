@@ -1,0 +1,19 @@
+{
+  "name": "ai-resume-writer",
+  "version": "1.0.0",
+  "description": "An AI-powered resume generator using Groq",
+  "main": "script.js",
+  "scripts": {
+    "start": "echo 'No start script specified'",
+    "test": "echo 'No tests defined' && exit 0"
+  },
+  "keywords": ["resume", "AI", "Groq", "Netlify"],
+  "author": "Alexandre Perras",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
